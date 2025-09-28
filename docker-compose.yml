@@ -1,0 +1,84 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: ivda-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: companies
+    volumes:
+      - mongodb_data:/data/db
+      - ./services/backend/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./services/backend/main_company.json:/docker-entrypoint-initdb.d/main_company.json:ro
+    networks:
+      - ivda-network
+
+  # Data Importer (runs once to import JSON data)
+  mongo-import:
+    image: mongo:7.0
+    container_name: ivda-mongo-import
+    depends_on:
+      - mongodb
+    volumes:
+      - ./services/backend/main_company.json:/main_company.json:ro
+    command: >
+      bash -c "
+        sleep 10 &&
+        mongoimport --host mongodb:27017 --db companies --collection companiesdb --file /main_company.json --jsonArray --drop
+      "
+    networks:
+      - ivda-network
+    restart: "no"
+
+  # Backend API
+  backend:
+    build:
+      context: ./services/backend
+      dockerfile: Dockerfile
+    container_name: ivda-backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/companies
+      - PORT=5000
+      - FLASK_ENV=development
+    depends_on:
+      - mongodb
+      - mongo-import
+    networks:
+      - ivda-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/companies?category=All"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend Application
+  frontend:
+    build:
+      context: ./services/frontend
+      dockerfile: Dockerfile
+    container_name: ivda-frontend
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - ivda-network
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  ivda-network:
+    driver: bridge

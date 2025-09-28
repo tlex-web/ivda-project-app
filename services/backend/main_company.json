@@ -1,0 +1,437 @@
+[
+  {
+    "id": 1,
+    "name": "alphabet",
+    "category": "tech",
+    "employees": 156500,
+    "founding_year": 1998,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 76033
+      },
+      {
+        "year": 2020,
+        "value": 40269
+      },
+      {
+        "year": 2019,
+        "value": 34343
+      },
+      {
+        "year": 2018,
+        "value": 30736
+      },
+      {
+        "year": 2017,
+        "value": 12662
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "apple",
+    "category": "tech",
+    "employees": 154000,
+    "founding_year": 1976,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 94680
+      },
+      {
+        "year": 2020,
+        "value": 57410
+      },
+      {
+        "year": 2019,
+        "value": 55260
+      },
+      {
+        "year": 2018,
+        "value": 59530
+      },
+      {
+        "year": 2017,
+        "value": 48350
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "amazon",
+    "category": "tech",
+    "employees": 1600000,
+    "founding_year": 1994,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 33364
+      },
+      {
+        "year": 2020,
+        "value": 21331
+      },
+      {
+        "year": 2019,
+        "value": 11588
+      },
+      {
+        "year": 2018,
+        "value": 10073
+      },
+      {
+        "year": 2017,
+        "value": 3033
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "microsoft",
+    "category": "tech",
+    "employees": 182268,
+    "founding_year": 1975,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 61270
+      },
+      {
+        "year": 2020,
+        "value": 44280
+      },
+      {
+        "year": 2019,
+        "value": 39240
+      },
+      {
+        "year": 2018,
+        "value": 16570
+      },
+      {
+        "year": 2017,
+        "value": 21200
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "meta",
+    "category": "tech",
+    "employees": 71970,
+    "founding_year": 2004,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 39370
+      },
+      {
+        "year": 2020,
+        "value": 29146
+      },
+      {
+        "year": 2019,
+        "value": 18485
+      },
+      {
+        "year": 2018,
+        "value": 22112
+      },
+      {
+        "year": 2017,
+        "value": 15934
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "united health",
+    "category": "health",
+    "employees": 300000,
+    "founding_year": 1977,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 17285
+      },
+      {
+        "year": 2020,
+        "value": 15403
+      },
+      {
+        "year": 2019,
+        "value": 13839
+      },
+      {
+        "year": 2018,
+        "value": 11222
+      },
+      {
+        "year": 2017,
+        "value": 7000
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "johnson and johnson",
+    "category": "health",
+    "employees": 127000,
+    "founding_year": 1886,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 19830
+      },
+      {
+        "year": 2020,
+        "value": 15115
+      },
+      {
+        "year": 2019,
+        "value": 17166
+      },
+      {
+        "year": 2018,
+        "value": 14679
+      },
+      {
+        "year": 2017,
+        "value": 1245
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "pfizer",
+    "category": "health",
+    "employees": 79000,
+    "founding_year": 1849,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 24966
+      },
+      {
+        "year": 2020,
+        "value": 10681
+      },
+      {
+        "year": 2019,
+        "value": 15479
+      },
+      {
+        "year": 2018,
+        "value": 11476
+      },
+      {
+        "year": 2017,
+        "value": 21748
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "cvs health",
+    "category": "health",
+    "employees": 295000,
+    "founding_year": 1963,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 7999
+      },
+      {
+        "year": 2020,
+        "value": 7399
+      },
+      {
+        "year": 2019,
+        "value": 7220
+      },
+      {
+        "year": 2018,
+        "value": 4320
+      },
+      {
+        "year": 2017,
+        "value": 6680
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "mckesson",
+    "category": "health",
+    "employees": 80000,
+    "founding_year": 1833,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 1114
+      },
+      {
+        "year": 2020,
+        "value": 900
+      },
+      {
+        "year": 2019,
+        "value": 67
+      },
+      {
+        "year": 2018,
+        "value": 2295
+      },
+      {
+        "year": 2017,
+        "value": 5070
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "ubs",
+    "category": "bank",
+    "employees": 71551,
+    "founding_year": 1862,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 7790
+      },
+      {
+        "year": 2020,
+        "value": 7560
+      },
+      {
+        "year": 2019,
+        "value": 5342
+      },
+      {
+        "year": 2018,
+        "value": 19
+      },
+      {
+        "year": 2017,
+        "value": 3806
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "credit suisse",
+    "category": "bank",
+    "employees": 50110,
+    "founding_year": 1856,
+    "profit": [
+      {
+        "year": 2021,
+        "value": -1822
+      },
+      {
+        "year": 2020,
+        "value": 4049
+      },
+      {
+        "year": 2019,
+        "value": 2089
+      },
+      {
+        "year": 2018,
+        "value": -860
+      },
+      {
+        "year": 2017,
+        "value": -1720
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "jp morgan",
+    "category": "bank",
+    "employees": 189315,
+    "founding_year": 1895,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 40790
+      },
+      {
+        "year": 2020,
+        "value": 38830
+      },
+      {
+        "year": 2019,
+        "value": 28320
+      },
+      {
+        "year": 2018,
+        "value": 31224
+      },
+      {
+        "year": 2017,
+        "value": 24830
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "goldman sachs",
+    "category": "bank",
+    "employees": 43900,
+    "founding_year": 1869,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 18271
+      },
+      {
+        "year": 2020,
+        "value": 14503
+      },
+      {
+        "year": 2019,
+        "value": 6838
+      },
+      {
+        "year": 2018,
+        "value": 9305
+      },
+      {
+        "year": 2017,
+        "value": 4260
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "bank of america",
+    "category": "bank",
+    "employees": 200000,
+    "founding_year": 1923,
+    "profit": [
+      {
+        "year": 2021,
+        "value": 29590
+      },
+      {
+        "year": 2020,
+        "value": 20492
+      },
+      {
+        "year": 2019,
+        "value": 22670
+      },
+      {
+        "year": 2018,
+        "value": 27075
+      },
+      {
+        "year": 2017,
+        "value": 18273
+      }
+    ]
+  }
+]
