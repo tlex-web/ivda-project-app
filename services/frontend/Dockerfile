@@ -1,29 +1,20 @@
-# Frontend Dockerfile
-FROM node:18-alpine AS build
+# Frontend Dockerfile - Simple approach using pre-built files
+FROM nginx:1.25-alpine
 
-# Set working directory
-WORKDIR /app
+# Remove default nginx configuration to prevent conflicts
+RUN rm -f /etc/nginx/conf.d/default.conf
 
-# Copy package files
-COPY package*.json ./
-
-# Install dependencies (including dev dependencies needed for build)
-RUN npm ci
-
-# Copy source code
-COPY . .
-
-# Build the application
-RUN npm run build
-
-# Production stage
-FROM nginx:alpine
-
-# Copy built app to nginx
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copy pre-built app to nginx
+COPY dist /usr/share/nginx/html
 
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Verify files were copied correctly and set permissions
+RUN ls -la /usr/share/nginx/html/ && \
+    ls -la /usr/share/nginx/html/js/ && \
+    ls -la /usr/share/nginx/html/css/ && \
+    chmod -R 755 /usr/share/nginx/html
 
 # Expose port
 EXPOSE 80

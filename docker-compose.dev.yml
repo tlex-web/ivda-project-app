@@ -1,0 +1,42 @@
+# Docker Compose override for development environment
+# Use with: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+services:
+  # Frontend Development Service with Hot Reloading
+  frontend:
+    build:
+      context: ./services/frontend
+      dockerfile: Dockerfile.dev
+    container_name: ivda-frontend-dev
+    ports:
+      - "3001:8080"
+    volumes:
+      # Mount source code for hot reloading
+      - ./services/frontend/src:/app/src
+      - ./services/frontend/public:/app/public
+      - ./services/frontend/vue.config.js:/app/vue.config.js
+      - ./services/frontend/babel.config.js:/app/babel.config.js
+      # Exclude node_modules to avoid conflicts
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    stdin_open: true
+    tty: true
+    networks:
+      - ivda-network
+
+  # Backend with development environment
+  backend:
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      - MONGO_URI=mongodb://mongodb:27017/companies
+      - PORT=5000
+    networks:
+      - ivda-network
+
+networks:
+  ivda-network:
+    driver: bridge

@@ -1,0 +1,12 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a knowledgeable business analyst who provides concise, factual information about companies. Provide key insights about the company's business model, industry position, recent developments, and interesting facts. Keep responses informative but concise (3-5 sentences)."
+        },
+        {
+            "role": "user",
+            "content": "Provide key information about the company {company_name}. Include details about their business model, industry, recent developments, and any interesting facts. Keep it concise and informative."
+        }
+    ]
+}

@@ -9,6 +9,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+/services/backend/src/llm/.env
 
 # Build outputs
 dist/
@@ -55,3 +56,7 @@ data/
 
 # Docker volumes
 mongodb_data/
+
+# Misc
+*.tex
+*.bib

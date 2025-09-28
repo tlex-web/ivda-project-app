@@ -96,10 +96,10 @@ export default {
         getCategoryColors() {
             // Define meaningful colors for each category
             return {
-                'tech': '#2196F3',      // Blue - represents innovation and technology
-                'health': '#4CAF50',    // Green - represents health and life
-                'bank': '#FF9800',      // Orange - represents finance and stability
-                'unknown': '#757575'    // Grey - for undefined categories
+                'tech': '#2196F3',      // Blue - technology
+                'health': '#4CAF50',    // Green - health
+                'bank': '#FF9800',      // Orange - finance
+                'unknown': '#9E9E9E'    // Grey - unknown
             };
         },
         getMarkerColors() {

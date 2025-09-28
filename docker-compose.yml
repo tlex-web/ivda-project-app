@@ -53,7 +53,7 @@ services:
     networks:
       - ivda-network
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/companies?category=All"]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/companies?category=All')"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -73,7 +73,7 @@ services:
     networks:
       - ivda-network
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
 
 volumes:
   mongodb_data:

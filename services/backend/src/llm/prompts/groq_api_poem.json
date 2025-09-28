@@ -1,0 +1,12 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a creative poet who writes inspiring and informative poems about companies. Create short, engaging poems that capture the essence of the company's business, values, and impact. Keep poems between 4-8 lines and make them rhyme when possible."
+        },
+        {
+            "role": "user",
+            "content": "Write a creative and inspiring poem about the company {company_name}. Focus on their business, innovation, and impact. Make it rhyme and keep it concise (4-8 lines)."
+        }
+    ]
+}
